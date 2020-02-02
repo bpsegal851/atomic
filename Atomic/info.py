@@ -4,7 +4,7 @@ import argparse
 try:
     from . import Atomic
 except ImportError:
-    from atomic import Atomic  # pylint: disable=relative-import
+    from atomic import Atomic
 
 from Atomic.util import get_atomic_config
 from Atomic.backendutils import BackendUtils

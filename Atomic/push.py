@@ -7,7 +7,7 @@ from . import satellite
 try:
     from . import Atomic
 except ImportError:
-    from atomic import Atomic # pylint: disable=relative-import
+    from atomic import Atomic 
 
 ATOMIC_CONFIG = util.get_atomic_config()
 REGISTRY_TYPE_CHOICES = ['docker', 'atomic']

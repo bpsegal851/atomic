@@ -18,7 +18,7 @@ except ImportError:
 try:
     from . import Atomic
 except ImportError:
-    from atomic import Atomic # pylint: disable=relative-import
+    from atomic import Atomic 
 
 try:
     _default_docker_lib = default_docker_lib()
@@ -101,7 +101,7 @@ def list_pvs(vgroup):
 
 def list_lvs(vgroup):
     if vgroup:
-        return map(lambda s: s.strip(), # pylint: disable=deprecated-lambda, map-builtin-not-iterating
+        return map(lambda s: s.strip(), # pylint: disable=map-builtin-not-iterating
                    util.check_output([ "lvs", "--noheadings", "-o", "name", vgroup ]).decode('utf-8').splitlines())
     else:
         return [ ]

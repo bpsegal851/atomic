@@ -1,7 +1,7 @@
 try:
     from . import Atomic
 except ImportError:
-    from atomic import Atomic  # pylint: disable=relative-import
+    from atomic import Atomic
 from .util import get_atomic_config, write_out, check_storage_is_available
 from Atomic.backendutils import BackendUtils
 

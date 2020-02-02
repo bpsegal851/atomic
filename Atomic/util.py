@@ -228,7 +228,7 @@ def check_output(cmd, env=None, stdin=None, stderr=None):
         except Exception as ex:
             raise ValueError("Command '{}' is not valid: {!r}".format(cmd, ex))
     try:
-        return subprocess.check_output(cmd, env=env, stdin=stdin, stderr=stderr, close_fds=True)
+        return subprocess.check_output(cmd, env=env, stdin=stdin, stderr=stderr)
     except OSError as e:
         if e.args[0] == errno.ENOENT:
             raise FileNotFound("Cannot find file: `{}`".format(cmd[0]))

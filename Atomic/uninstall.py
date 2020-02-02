@@ -9,7 +9,7 @@ from Atomic.backends._ostree import OSTreeBackend
 try:
     from . import Atomic
 except ImportError:
-    from atomic import Atomic # pylint: disable=relative-import
+    from atomic import Atomic 
 
 ATOMIC_CONFIG = util.get_atomic_config()
 _storage = ATOMIC_CONFIG.get('default_storage', "docker")

@@ -7,7 +7,7 @@ import sys
 try:
     from . import Atomic
 except ImportError:
-    from atomic import Atomic # pylint: disable=relative-import
+    from atomic import Atomic 
 
 def cli(subparser):
     # atomic stop

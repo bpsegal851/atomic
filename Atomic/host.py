@@ -4,7 +4,7 @@ import os
 try:
     from . import Atomic
 except ImportError:
-    from atomic import Atomic # pylint: disable=relative-import
+    from atomic import Atomic 
 
 def _add_remainder_arg(parser):
     parser.add_argument("args", nargs=argparse.REMAINDER,

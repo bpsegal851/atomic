@@ -9,7 +9,7 @@ from .syscontainers import OSTREE_PRESENT
 try:
     from . import Atomic
 except ImportError:
-    from atomic import Atomic # pylint: disable=relative-import
+    from atomic import Atomic 
 
 SPC_ARGS = ["-i",
             "--privileged",
